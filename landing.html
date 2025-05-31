@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guardian Angel</title>
+  <link rel="stylesheet" href="./assest/style/landing.css" />
+  <link rel="stylesheet" href="./assest/style/menu.css">
+  <link rel="stylesheet" href="./assest/style/darkMode.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <div class="main">
+    <div class="upper">
+      <div class="nav">
+        <h1 id="userName"></h1>
+        <img src="./assest/media/user.png" alt="user" id="userIcon" />
+      </div>
+      <div>
+        <h2>Emergency Helpline</h2>
+        24×7 services
+        <div class="buttons">
+          <input type="button" value="Call" />
+          <input type="button" value="Chat" onclick="switchPage('bot')"/>
+          <input type="button" value="Location" onclick="switchPage('location')"/>
+        </div>
+        <span id="txt">Be Secure</span>
+      </div>
+    </div>
+
+    <div class="lower">
+      <!-- Home Page -->
+      <div class="lower page" id="page-home">
+        <div class="mid">
+          <h1>Emergency Help Needed?</h1>
+          <p>Press the button below and help will reach shortly</p>
+          <img src="./assest/media/center_call.png" alt="Emergency" />
+        </div>
+      </div>
+
+      <!-- Location Page -->
+      <div class="lower page" id="page-location" style="display: none">
+        <div class="mid">
+          <h1>Your Location</h1>
+          <p>Fetching current location...</p>
+        </div>
+      </div>
+
+      <!-- Bot Page -->
+      <div class="lower page" id="page-bot" style="display: none">
+        <div class="mid">
+          <h1>AI Chat Bot</h1>
+          <p>Ask me anything for your safety or guidance.</p>
+        </div>
+      </div>
+
+      <!-- Menu Page -->
+      <div class="lower page" id="page-menu" style="display: none">
+        <div class="menu-header">Profile</div>
+        <div class="menu-item">
+          <i class="fas fa-user"></i><span>Account</span><i class="fas fa-chevron-right arrow"></i>
+        </div>
+
+        <div class="menu-section-title">General Settings</div>
+
+        <div class="menu-item">
+          <i class="fas fa-globe"></i><span>Language</span><i class="fas fa-chevron-right arrow"></i>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-question"></i><span>About</span><i class="fas fa-chevron-right arrow"></i>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-exclamation-triangle"></i><span>Terms & Conditions</span><i class="fas fa-chevron-right arrow"></i>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-share-alt"></i><span>Share This App</span><i class="fas fa-chevron-right arrow"></i>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+          <div class="toggle-container">
+            <div id="darkToggle" class="toggle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Navigation -->
+  <div class="footer">
+    <div class="inside" onclick="switchPage('home')">
+      <i class="fa fa-home"></i>
+    </div>
+    <div class="inside" onclick="switchPage('location')">
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+    <div class="center-icon">
+      <img src="./assest/media/siren.png" alt="siren" />
+    </div>
+    <div class="inside" onclick="switchPage('bot')">
+      <i class="fa-solid fa-robot"></i>
+    </div>
+    <div class="inside" onclick="switchPage('menu')">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+      <script src="./assest/script/minimiseLoading.js"></script> 
+      <script src="./assest/script/deviceCheck.js"></script>  
+<script type="module" src="./assest/script/landing.js"></script>
+</body>
+</html>
