@@ -49,12 +49,40 @@
       </div>
 
       <!-- Bot Page -->
-
       <div class="lower page" id="page-bot" style="display: none">
         <div class="webchat" >
           <iframe
             style="height: 100%; width: 100%; border: none;"
-            src="https://cdn.botpress.cloud/webchat/v2.4/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/01/02/20250601023409-6MJU22GE.json"
+            srcdoc='
+            <!doctype html>
+            <html lang="en">
+              <head></head>
+              <body>
+                <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+                <script defer>
+                  window.botpress.on("webchat:ready", () => {
+                    botpress.open();
+                  });
+        
+                  window.botpress.init({
+                    "botId": "c6b08074-b59c-4971-8d77-477c93ac46d0",
+                    "clientId": "403487c2-8b37-425e-ac00-490b0d7df80e",
+                    "configuration": {
+                      botName: "Graudian",
+                      "website": {},
+                      avatarUrl: "",
+                      "email": {},
+                      "phone": {},
+                      "termsOfService": {},
+                      "privacyPolicy": {},
+                      "variant": "solid",
+                      "themeMode": "light",
+                      "fontFamily": "rubik"
+                    }
+                  });
+                </script>
+              </body>
+            </html>'
           ></iframe>
         </div>
       </div>
@@ -114,7 +142,7 @@
   <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
   <script src="./assest/script/bot.js"></script>
   <script src="./assest/script/minimiseLoading.js"></script> 
- <script src="./assest/script/deviceCheck.js"></script>  
-<script type="module" src="./assest/script/landing.js"></script>
+  <!-- <script src="./assest/script/deviceCheck.js"></script>  
+<script type="module" src="./assest/script/landing.js"></script> -->
 </body>
 </html>

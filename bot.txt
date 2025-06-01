@@ -1,0 +1,64 @@
+🟢 1. Start Node
+Greeting the user.
+
+Ask: “Are you feeling safe or need assistance?”
+
+Use Quick Replies like:
+
+📍 Share My Location
+
+🚨 Emergency Help
+
+ℹ️ General Info
+
+➡️ Link responses to appropriate nodes.
+
+🔵 2. Location Sharing Node
+Ask for permission to access location.
+
+Use a custom action or API to fetch the current location.
+
+Confirm location: “Got your location! Do you want to find the nearest police station?”
+
+➡️ Branch to next step.
+
+🔴 3. Find Nearest Police Station Node
+Use external APIs like Google Maps or set up a static list of nearby police stations.
+
+Show top 3 nearby stations with:
+
+Name
+
+Distance
+
+Map link
+
+➡️ Then ask if they want to call or navigate.
+
+⚠️ 4. Emergency Help Node
+Ask: “Do you want to send an SOS message to your trusted contacts?”
+
+Trigger a function to:
+
+Send pre-written SMS with location.
+
+Notify police hotline.
+
+Add a timer or confirmation before sending (to avoid false alarms).
+
+🟣 5. General Info / Safety Tips Node
+Provide tips like:
+
+Stay in well-lit areas
+
+Use public transport
+
+Keep emergency contacts handy
+
+Can include FAQ about using the app.
+
+⚫️ 6. Conversation End Node
+Thank the user.
+
+Say: “Your Guardian Angel is always here for you. Stay safe!”
+
